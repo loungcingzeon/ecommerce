@@ -38,6 +38,7 @@
   "dependencies": {
     "bootstrap": "3.3.7",
     "font-awesome": "4.7.0",
+    "rc-pagination": "^1.16.1",
     "react-router-dom": "4.2.2"
   }
 }
