@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import NavTop from 'components/NavTop/index.jsx';
 import NavSiden from 'components/Navsiden/index.jsx';
 import './theme.css';
+import './index.scss';
 
 class Layout extends Component{
     constructor(props){

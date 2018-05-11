@@ -30,7 +30,7 @@ class NavTop extends Component{
        return (
            <nav className="navbar navbar-default top-navbar" role="navigation">
                <div className="navbar-header">
-                   <Link className="navbar-brand" to="/"><b>HAPPY</b>MMALL</Link>
+                   <Link className="navbar-brand" to="/"><b>ALAN</b>MMALL</Link>
                </div>
 
                <ul className="nav navbar-top-links navbar-right">
