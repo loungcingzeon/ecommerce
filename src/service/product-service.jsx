@@ -24,7 +24,7 @@ class Product{
             data    : data
         });
     }
-    // 变更商品信息
+    // 变更商品销售状态
     onSetProductStatus(productInfo){
         return _mm.request({
             type    : 'post',
@@ -33,5 +33,17 @@ class Product{
         });
     }
 
+    /**
+     * 品类相关
+     */
+    getCategoryList( firstCategoryId ){
+        return _mm.request({
+            type    : 'post',
+            url     : '/manage/category/get_category.do',
+            data    : {
+                categoryId: firstCategoryId || 0
+            }
+        });
+    }
 }
 export default Product;

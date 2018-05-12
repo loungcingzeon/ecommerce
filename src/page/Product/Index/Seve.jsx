@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import MUtil                from 'util/mm.jsx';
 import Product              from 'service/product-service.jsx';
 import PageTitle            from 'components/Pagetitle/index.jsx';
+import CategorySelector     from './CategorySelector.jsx';
 
 const _mm                   = new MUtil();
 const _product              = new Product();
@@ -24,6 +25,13 @@ status=1
 class ProductSeve extends Component{
     constructor(props){
         super(props);
+        this.staste = {
+            categoryId: 0,
+            parentCategoryId: 0
+        }
+    }
+    onCategoryChange(categoryId, parentCategoryId){
+        console.log('categoryId='+categoryId, 'parentCategoryId='+parentCategoryId)
     }
 
     render(){
@@ -45,14 +53,7 @@ class ProductSeve extends Component{
                     </div>
                     <div className="form-group">
                         <label  className="col-md-2 control-label">所属分类</label>
-                        <div className="col-md-10">
-                            <select name="" className="form-control cate-select">
-                                <option value="">请选择一级分类</option>
-                            </select>
-                            <select name="" className="form-control cate-select">
-                                <option value="">请选择二级分类</option>
-                            </select>
-                        </div>
+                        <CategorySelector onCategoryChange={(categoryId, parentCategoryId) => this.onCategoryChange( categoryId, parentCategoryId )}/>
                     </div>
                     <div className="form-group">
                         <label className="col-md-2 control-label">商品价格</label>
